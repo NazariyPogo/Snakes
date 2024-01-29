@@ -9,3 +9,13 @@ def get_user_input():
             return decision
         else:
             print("That is an invalid input, please enter a whole number!")
+
+def get_user_int_in_range(bot, top):
+    while True:
+        decision = input("Enter a number: ")
+        if decision.isdigit():
+            decision = int(decision)
+            if decision >= 1000 and decision <= 9999:
+                return decision
+        else:
+            print("That is an invalid input, please enter a whole number!")
