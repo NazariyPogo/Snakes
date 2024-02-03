@@ -17,5 +17,17 @@ def get_user_int_in_range(bot, top, request_text):
             decision = int(decision)
             if decision >= 1000 and decision <= 9999:
                 return decision
+            else:
+                print(f"That is an invalid input, please enter a whole number between {bot} and {top}!")
         else:
             print(f"That is an invalid input, please enter a whole number between {bot} and {top}!")
+
+def get_user_input_yn(request_text):
+    while True:
+        decision = input(request_text)
+        if decision.lower() == 'y':
+            return True
+        elif decision.lower() == 'n':
+            return False
+        else:
+            print("That is an invalid input, please enter a whole number!")
