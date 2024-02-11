@@ -49,6 +49,7 @@ def insertion_sort(list):
                 break
         break
 
+
 ############################ (I like mine more)
 
 def insertionSortBorrowed(arr):
@@ -67,10 +68,12 @@ def insertionSortBorrowed(arr):
 
 ############################
 
+
 def sort_swap(list, index_a, index_b):
     temp = list[index_a]
     list[index_a] = list[index_b]
     list[index_b] = temp
+
 
 ############################ Borrowed binary insertion sort:
 
@@ -100,6 +103,25 @@ def insertion_sort_bin(list):
     return list
 
 ############################
+
+
+def get_user_input_text(request_text):
+    return input(request_text)
+
+#Copied over from practice 21
+def take_from_file_to_txt(origin_file, end_file):
+    data = read_from_file(origin_file)
+    save_to_file(end_file, data)
+
+def save_to_file(file_name, data):
+    with open(file_name, 'w') as open_file:
+        open_file.write(data)
+
+def read_from_file(file_name):
+    with open(file_name, 'r') as open_file:
+        return open_file.read()
+
+
 
 if __name__ == "__main__":
 
